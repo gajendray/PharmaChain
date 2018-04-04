@@ -1,2 +1,1 @@
-# PharmaChain
-A Blockchain solution for pharma industry. 
+# org.example.biznet

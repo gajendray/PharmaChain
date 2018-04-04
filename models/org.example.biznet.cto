@@ -1,0 +1,56 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.example.biznet
+
+asset Product identified by productId {
+  o String productId
+  o String productName
+  o String barCodeValue
+  o String universalProductCode 
+  o String group
+  o Integer quantity
+  
+  --> Manufacturer manufacturer
+  --> WholeSaler wholeSaler optional
+  --> PharmacyRetailer pharmacyRetailer optional
+  --> Patient patient optional
+}
+
+participant Manufacturer identified by manufacturerId {
+  o String manufacturerId
+  o String CompnayName
+  o String Address
+}
+
+participant WholeSaler identified by wholeSaleId {
+  o String wholeSaleId
+  o String Name
+}
+
+participant PharmacyRetailer identified by pharmacyRetailerId{
+  o String pharmacyRetailerId
+  o String RetailerName
+}
+
+participant Patient identified by patientId {
+ o String patientId
+ o String FirstName
+ o String LastName
+}
+
+transaction AT_Manufacturer_WholeSaler {
+  --> Product product
+  --> WholeSaler wholeSaler
+}
+transaction AT_WholeSaler_PharmacyRetailer {
+  --> Product product
+  --> PharmacyRetailer pharmacyRetailer
+}
+
+transaction AT_PharmacyRetailer_Patient {
+  --> Product product
+  --> Patient patient
+   
+}

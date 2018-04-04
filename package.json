@@ -1,0 +1,22 @@
+{
+  "name": "blockmixtestnet",
+  "version": "0.0.1",
+  "description": "Test net to track medcial product ",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Gajendra Yadav",
+  "email": "gajendrayadav24@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}

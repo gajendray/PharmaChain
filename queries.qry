@@ -1,0 +1,7 @@
+query verifyProduct {
+  description: "Verify the product"
+  statement:
+ SELECT org.example.biznet.Product 
+          WHERE (universalProductCode==_$uniquecode)
+}
+
